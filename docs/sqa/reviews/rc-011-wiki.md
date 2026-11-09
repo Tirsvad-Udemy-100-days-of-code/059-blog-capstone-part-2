@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; Mode: autonomous, not independent | [0d6728f] |
-| 2026-11-09 | Accepted | Claude (AI) for S01 | AI as stand-in for S01 | Closed criterion 14 on the published wiki; verdict Go | pending |
+| 2026-11-09 | Accepted | Claude (AI) for S01 | AI as stand-in for S01 | Closed criterion 14 on the published wiki; verdict Go | [887e85c] |
 
 ---
 
@@ -60,3 +60,4 @@ Go — every Mandatory criterion passes; criterion 14 was closed on the publishe
 [MIL-004]: ../../milestones/mil-004-docs-wiki-screenshots.md
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [0d6728f]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/0d6728fe7020532a2258af564467f4c84372094c
+[887e85c]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/887e85c3d63e0260e4111b8c981d5d38ac63cb83

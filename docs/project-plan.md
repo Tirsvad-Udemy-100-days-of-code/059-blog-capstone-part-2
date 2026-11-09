@@ -45,10 +45,10 @@ branch, one pull request, one review record and one Milestone on the git host.
 
 | Gateway | Document | Window | Decision date | Owner | Stories | Main deliverable | Milestone |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| G1 Project setup and tooling | [MIL-001] | 2026-11-09 to 2026-11-10 | 2026-11-10 | S01 | none (technical) | `pyproject.toml`, layout, README, repository metadata | not yet synced |
-| G2 Site skeleton (Steps 1-5) | [MIL-002] | 2026-11-10 to 2026-11-12 | 2026-11-12 | S01 | none (lecture steps) | Bootstrap site with shared header and footer, About, Contact | not yet synced |
-| G3 Dynamic posts (Steps 6-7) | [MIL-003] | 2026-11-12 to 2026-11-14 | 2026-11-14 | S01 | none (lecture steps) | Posts from the API and post pages | not yet synced |
-| G4 Docs and wiki | [MIL-004] | 2026-11-14 to 2026-11-16 | 2026-11-16 | S01 | none (documentation) | README, trilingual wiki, screenshots | not yet synced |
+| G1 Project setup and tooling | [MIL-001] | 2026-11-09 to 2026-11-10 | 2026-11-10 | S01 | none (technical) | `pyproject.toml`, layout, README, repository metadata | [Milestone 384][ms-384] |
+| G2 Site skeleton (Steps 1-5) | [MIL-002] | 2026-11-10 to 2026-11-12 | 2026-11-12 | S01 | none (lecture steps) | Bootstrap site with shared header and footer, About, Contact | [Milestone 385][ms-385] |
+| G3 Dynamic posts (Steps 6-7) | [MIL-003] | 2026-11-12 to 2026-11-14 | 2026-11-14 | S01 | none (lecture steps) | Posts from the API and post pages | [Milestone 386][ms-386] |
+| G4 Docs and wiki | [MIL-004] | 2026-11-14 to 2026-11-16 | 2026-11-16 | S01 | none (documentation) | README, trilingual wiki, screenshots | [Milestone 387][ms-387] |
 
 ```plantuml
 @startgantt
@@ -113,3 +113,7 @@ A No-Go at a gateway moves every later date by the rework time; the end date of
 [MIL-003]: ./milestones/mil-003-dynamic-posts.md
 [MIL-004]: ./milestones/mil-004-docs-wiki-screenshots.md
 [1f11ab0]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/1f11ab05fc7d3af6f6694514dc6b103f9b7d557f
+[ms-384]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/milestone/384
+[ms-385]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/milestone/385
+[ms-386]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/milestone/386
+[ms-387]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/milestone/387

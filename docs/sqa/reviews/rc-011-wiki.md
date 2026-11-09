@@ -9,7 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; Mode: autonomous, not independent | [0d6728f] |
+| 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; Mode: autonomous, not independent | [0d6728f] |
+| 2026-11-09 | Accepted | Claude (AI) for S01 | AI as stand-in for S01 | Closed criterion 14 on the published wiki; verdict Go | pending |
 
 ---
 
@@ -39,19 +40,19 @@
 | 11 | Every page starts with the language line, with the current language in bold and a link to the same page in each other language | Pass | Every page starts with the language line, the current language in bold. |
 | 12 | A page in a language other than English is named `<Page>-<code>.md`, with a BCP 47 code; English has no suffix | Pass | `<Page>-da.md` and `<Page>-ms.md`; English has no suffix. |
 | 13 | Code blocks, commands, file names and IDs stay in English in every language | Pass | Code blocks and reference definitions are byte-identical to English (verified by script). |
-| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pending | The wiki is published by the host workflow after the merge; the published sidebar and links are checked then (action item). |
+| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pass | On the host after the merge: 28 pages published (27 pages and the sidebar); the published sidebar lists every English page and the Languages section; all internal links of all 28 pages resolve (0 dead links); the screenshot URL answers 200. Checked 2026-11-09 by the AI as stand-in for S01. |
 | 15 | A change to the layout rules (sections, order, naming) is made in the generator or template and in this checklist's source rules together | N-A | No layout rule changed. |
 | 16 | The wiki folder (`docs/wiki/`) is flat: every page, `Home.md` and `_Sidebar.md` included, is directly in it, and languages are told apart by file name, never by a subfolder | Pass | `docs/wiki/` is flat; no subfolder. |
 
 ## Overall Verdict
 
-Go-with-conditions — every Mandatory criterion passes except criterion 14, which only the published wiki can answer (Pending). The Danish and Bahasa Malaysia texts were written by the AI and have not been read by a native speaker; they follow the English page by page.
+Go — every Mandatory criterion passes; criterion 14 was closed on the published wiki on 2026-11-09 (the earlier verdict was Go-with-conditions). The Danish and Bahasa Malaysia texts were written by the AI and have not been read by a native speaker; they follow the English page by page.
 
 ## Action Items
 
 | Action | Owner | Due |
 | --- | --- | --- |
-| After the merge, check the published sidebar and every link on the host, then close criterion 14 | S01 | 2026-11-16 |
+| Closed: the published sidebar and every link were checked on the host | S01 | 2026-11-09 |
 | Native review of the Danish and Bahasa Malaysia text | S01 | 2026-11-16 |
 
 ---

@@ -58,6 +58,23 @@ Go — every Mandatory criterion passes and the language criteria are confirmed 
 | --- | --- | --- |
 | None | S01 | 2026-11-09 |
 
+
+## Delivery Verification
+
+Recorded on 2026-11-09 after the work of MIL-004 was done, from a fresh clone of the branch that followed only the README (`python -m venv .venv`, `pip install --upgrade pip`, `pip install -e ".[dev]"`, `python -m pytest`, `python -m blog.main`).
+
+| Success criterion (BC-001) | Result | Evidence |
+| --- | --- | --- |
+| SC1 seven steps | Met | README and wiki show Steps 1 to 7 |
+| SC2 tests and coverage | Met | 50 passed, 99 % coverage |
+| SC3 runtime dependencies | Met | `dependencies = ["flask>=3.0"]` |
+| SC4 wiki languages | Met | 9 pages each in en, da, ms and `_Sidebar.md` (structure check, no error) |
+| SC5 screenshots | Met | 8 images, one per step (two for Step 5), in README and in each wiki language |
+| SC6 clean-clone run | Met | `/` returned 200, `/post/1` 200, `/post/99` 404 |
+| SC7 repository metadata | Met | description set, 9 topics |
+| SC8 Doxygen | Met | `doxygen Doxyfile` printed no warning |
+| SC9 review gates | Partly met | RC-004 to RC-006 and RC-008 to RC-010 are `Go`; RC-011 (wiki) is `Go-with-conditions` until the published wiki is checked |
+
 ---
 
 [MIL-004]: ../../milestones/mil-004-docs-wiki-screenshots.md

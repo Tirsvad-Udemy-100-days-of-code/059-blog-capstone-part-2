@@ -103,6 +103,30 @@ def test_bundled_repository_reads_the_bundled_file() -> None:
     assert (posts[0].id, posts[0].title) == (1, "The Life of Cactus")
 
 
+@pytest.mark.parametrize("url", ["file:///etc/passwd", "ftp://x/y", "/etc/passwd"])
+def test_default_fetch_rejects_non_http_scheme(url: str, monkeypatch: pytest.MonkeyPatch) -> None:
+    """@brief urlopen_fetch refuses other schemes without opening anything."""
+
+    def fail_urlopen(*args: object, **kwargs: object) -> None:
+        raise AssertionError("urlopen must not be called")
+
+    monkeypatch.setattr(module, "urlopen", fail_urlopen)
+    with pytest.raises(ValueError, match="unsupported URL scheme"):
+        module.urlopen_fetch(url, 3)
+
+
+def test_api_repository_falls_back_on_file_url(monkeypatch: pytest.MonkeyPatch) -> None:
+    """@brief A file: API URL is refused by the default fetch and the bundled posts are used."""
+
+    def fail_urlopen(*args: object, **kwargs: object) -> None:
+        raise AssertionError("urlopen must not be called")
+
+    monkeypatch.setattr(module, "urlopen", fail_urlopen)
+    monkeypatch.setattr(constants, "POSTS_API_URL", "file:///etc/passwd")
+    posts = ApiPostRepository(module.urlopen_fetch).fetch_posts()
+    assert posts == BundledPostRepository().fetch_posts()
+
+
 def test_default_fetch_reads_url_with_timeout(monkeypatch: pytest.MonkeyPatch) -> None:
     """@brief urlopen_fetch passes the timeout and closes the response (no socket opened)."""
     seen: dict[str, object] = {}

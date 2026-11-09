@@ -28,7 +28,7 @@ updated whenever an artifact instance is created or reviewed.
 | PP-001 | PP | en | it | BC-001, SA-001 | MIL-001..004 | RC-003 |
 | MIL-001 | MIL | en | it | BC-001, PP-001 | - | RC-004, RC-008 |
 | MIL-002 | MIL | en | it | BC-001, MIL-001 | - | RC-005, RC-009 |
-| MIL-003 | MIL | en | it | BC-001, MIL-002 | - | RC-006 |
+| MIL-003 | MIL | en | it | BC-001, MIL-002 | - | RC-006, RC-010 |
 | MIL-004 | MIL | en | it | BC-001, MIL-003 | - | RC-007 |
 
 ## Concern Coverage

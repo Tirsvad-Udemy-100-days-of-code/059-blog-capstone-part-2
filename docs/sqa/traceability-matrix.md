@@ -26,7 +26,7 @@ updated whenever an artifact instance is created or reviewed.
 | BC-001 | BC | en | it | - | SA-001, PP-001, MIL-001..004 | RC-001 |
 | SA-001 | SA | en | it | BC-001 | PP-001 | RC-002 |
 | PP-001 | PP | en | it | BC-001, SA-001 | MIL-001..004 | RC-003 |
-| MIL-001 | MIL | en | it | BC-001, PP-001 | - | RC-004 |
+| MIL-001 | MIL | en | it | BC-001, PP-001 | - | RC-004, RC-008 |
 | MIL-002 | MIL | en | it | BC-001, MIL-001 | - | RC-005 |
 | MIL-003 | MIL | en | it | BC-001, MIL-002 | - | RC-006 |
 | MIL-004 | MIL | en | it | BC-001, MIL-003 | - | RC-007 |

@@ -7,15 +7,22 @@
 import json
 import logging
 from collections.abc import Callable
+
+# False positive: the project requires Python >=3.13, where importlib.resources exists.
+# nosemgrep: opengrep.rules.python.lang.compatibility.python37-compatibility-importlib2
 from importlib import resources
 from typing import Any
 from urllib.error import URLError
+from urllib.parse import urlsplit
 from urllib.request import urlopen
 
 from blog import constants
 from blog.domain.post import Post
 
 logger = logging.getLogger(__name__)
+
+ALLOWED_URL_SCHEMES = frozenset({"http", "https"})
+"""@brief URL schemes urlopen_fetch may open; urllib would also open file: and ftp:."""
 
 Fetch = Callable[[str, int], bytes]
 """@brief Reads a URL with a timeout in seconds and returns the response body."""
@@ -53,7 +60,13 @@ def urlopen_fetch(url: str, timeout: int) -> bytes:
     @param url Address to read.
     @param timeout Seconds to wait before giving up.
     @return The response body.
+    @throws ValueError When the URL scheme is not http or https.
     """
+    scheme = urlsplit(url).scheme
+    if scheme not in ALLOWED_URL_SCHEMES:
+        raise ValueError(f"unsupported URL scheme: {scheme!r}")
+    # Scheme restricted to http/https above.
+    # nosemgrep: opengrep.rules.python.lang.security.audit.dynamic-urllib-use-detected
     with urlopen(url, timeout=timeout) as response:
         body: bytes = response.read()
     return body

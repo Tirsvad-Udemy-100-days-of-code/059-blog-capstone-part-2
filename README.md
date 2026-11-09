@@ -29,6 +29,20 @@ with a screenshot, in the project wiki.
 | `tests/` | pytest tests (`unit/`, `integration/`, and `e2e/` for the Docker screenshot script) |
 | `docs/` | Project documents (business case, plan, reviews), the wiki and the screenshots |
 
+### The seven lecture steps
+
+Each step has a page in the [wiki][wiki] that explains what it teaches.
+
+| Step | What it adds | Screenshot |
+| --- | --- | --- |
+| 1 | Clean Blog template sorted into `templates/` and `static/` | ![Step 1][step-1] |
+| 2 | `home` route renders `index.html` (the page is still unstyled) | ![Step 2][step-2] |
+| 3 | `url_for('static', ...)` restores CSS, JavaScript and the background image | ![Step 3][step-3] |
+| 4 | `header.html` and `footer.html` shared with Jinja `include` | ![Step 4][step-4] |
+| 5 | About and Contact pages and navigation links built with `url_for` | ![Step 5 About][step-5a] ![Step 5 Contact][step-5b] |
+| 6 | Posts fetched from a JSON API and listed with a Jinja `for` loop | ![Step 6][step-6] |
+| 7 | One page per post (`show_post`, `/post/<id>`) | ![Step 7][step-7] |
+
 ## 📋 Requirements
 
 - Python 3.13 or newer (the language and `venv`).
@@ -110,6 +124,15 @@ The documents a newcomer needs, in reading order.
 ---
 
 [license]: ./LICENSE
+[wiki]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/wiki
+[step-1]: ./docs/screenshots/step-1-file-structure.png
+[step-2]: ./docs/screenshots/step-2-unstyled-home.png
+[step-3]: ./docs/screenshots/step-3-styled-home.png
+[step-4]: ./docs/screenshots/step-4-includes.png
+[step-5a]: ./docs/screenshots/step-5-about.png
+[step-5b]: ./docs/screenshots/step-5-contact.png
+[step-6]: ./docs/screenshots/step-6-home-posts.png
+[step-7]: ./docs/screenshots/step-7-post.png
 [repository]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2
 [documentation]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/wiki
 [issues]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/issues

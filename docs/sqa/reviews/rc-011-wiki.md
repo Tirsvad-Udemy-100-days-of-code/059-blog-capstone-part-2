@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; Mode: autonomous, not independent | pending |
+| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; Mode: autonomous, not independent | [0d6728f] |
 
 ---
 
@@ -58,3 +58,4 @@ Go-with-conditions — every Mandatory criterion passes except criterion 14, whi
 
 [MIL-004]: ../../milestones/mil-004-docs-wiki-screenshots.md
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
+[0d6728f]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/0d6728fe7020532a2258af564467f4c84372094c

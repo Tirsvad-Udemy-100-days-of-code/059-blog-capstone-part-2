@@ -29,7 +29,7 @@ updated whenever an artifact instance is created or reviewed.
 | MIL-001 | MIL | en | it | BC-001, PP-001 | - | RC-004, RC-008 |
 | MIL-002 | MIL | en | it | BC-001, MIL-001 | - | RC-005, RC-009 |
 | MIL-003 | MIL | en | it | BC-001, MIL-002 | - | RC-006, RC-010 |
-| MIL-004 | MIL | en | it | BC-001, MIL-003 | - | RC-007 |
+| MIL-004 | MIL | en | it | BC-001, MIL-003 | - | RC-007, RC-011 |
 
 ## Concern Coverage
 

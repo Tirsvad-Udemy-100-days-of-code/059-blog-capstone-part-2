@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; Mode: autonomous, not independent | pending |
+| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; Mode: autonomous, not independent | [7a9c41b] |
 
 ---
 
@@ -59,3 +59,4 @@ Go — every Mandatory criterion passes. Checks run: `ruff check`, `ruff format 
 
 [MIL-003]: ../../milestones/mil-003-dynamic-posts.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[7a9c41b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/7a9c41b54f36f7818210aa5ab9e1e1d8f605ebed

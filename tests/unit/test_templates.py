@@ -9,7 +9,7 @@ from pathlib import Path
 import pytest
 
 TEMPLATES = Path(__file__).resolve().parents[2] / "src/blog/presentation/templates"
-PAGES = ["index.html", "about.html", "contact.html"]
+PAGES = ["index.html", "post.html", "about.html", "contact.html"]
 
 
 def _read(name: str) -> str:

@@ -1,7 +1,7 @@
 """
 @file
 @package tests.e2e.capture_screenshots
-@brief Takes the lecture screenshots (steps 1-5) inside a Docker container.
+@brief Takes the lecture screenshots (steps 1-7) inside a Docker container.
 
 Run through `docker run` (see tests/e2e/Dockerfile); never on the host desktop
 (framework/process/gui-testing.md). Playwright lives in the image and is not a
@@ -17,6 +17,7 @@ from playwright.sync_api import Page, Route, sync_playwright
 from werkzeug.serving import make_server
 
 import blog.presentation
+from blog.infrastructure.api_post_repository import BundledPostRepository
 from blog.presentation.app import create_app
 
 VIEWPORT_WIDTH = 1280
@@ -123,7 +124,7 @@ def take_screenshots(output_dir: Path) -> list[Path]:
     """
     output_dir.mkdir(parents=True, exist_ok=True)
     templates = PRESENTATION / "templates"
-    server = make_server("127.0.0.1", 0, create_app())
+    server = make_server("127.0.0.1", 0, create_app(BundledPostRepository()))
     threading.Thread(target=server.serve_forever, daemon=True).start()
     base = f"http://127.0.0.1:{server.server_port}"
     names = (
@@ -133,6 +134,8 @@ def take_screenshots(output_dir: Path) -> list[Path]:
         "step-4-includes",
         "step-5-about",
         "step-5-contact",
+        "step-6-home-posts",
+        "step-7-post",
     )
     targets = {name: output_dir / f"{name}.png" for name in names}
     try:
@@ -159,6 +162,8 @@ def take_screenshots(output_dir: Path) -> list[Path]:
             _shoot_html(page, monospace_page(sections), targets["step-4-includes"])
             _shoot_page(page, f"{base}/about", targets["step-5-about"])
             _shoot_page(page, f"{base}/contact", targets["step-5-contact"])
+            _shoot_page(page, f"{base}/", targets["step-6-home-posts"])
+            _shoot_page(page, f"{base}/post/1", targets["step-7-post"])
             browser.close()
     finally:
         server.shutdown()

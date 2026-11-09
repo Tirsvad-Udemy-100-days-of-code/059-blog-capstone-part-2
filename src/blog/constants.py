@@ -23,3 +23,9 @@ REQUEST_TIMEOUT_SECONDS: Final[int] = 5
 
 POSTS_FALLBACK_FILE: Final[str] = "posts.json"
 """@brief Local file used when the posts endpoint is unavailable."""
+
+DEFAULT_AUTHOR: Final[str] = "Anonymous"
+"""@brief Author shown when a post has none."""
+
+DEFAULT_DATE: Final[str] = "Undated"
+"""@brief Date shown when a post has none."""

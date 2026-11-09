@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Accepted | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-005, Mode: autonomous, not independent | pending |
+| 2026-11-09 | Accepted | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-005, Mode: autonomous, not independent | [1f11ab0] |
 
 ---
 
@@ -74,3 +74,4 @@ A pull request on branch `mil-002-site-skeleton` with the Clean Blog template in
 ---
 
 [BC-001]: ../business-case.md
+[1f11ab0]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/1f11ab05fc7d3af6f6694514dc6b103f9b7d557f

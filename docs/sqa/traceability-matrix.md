@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | <reviewer S-ID> | Initial version | pending |
+| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | <reviewer S-ID> | Initial version | [1f11ab0] |
 
 ---
 
@@ -52,3 +52,4 @@ updated whenever an artifact instance is created or reviewed.
 ---
 
 [BC-001]: ../business-case.md
+[1f11ab0]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/1f11ab05fc7d3af6f6694514dc6b103f9b7d557f

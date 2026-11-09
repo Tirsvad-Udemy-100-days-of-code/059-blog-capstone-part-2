@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Accepted | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-003, Mode: autonomous, not independent | pending |
+| 2026-11-09 | Accepted | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-003, Mode: autonomous, not independent | [1f11ab0] |
 
 ---
 
@@ -112,3 +112,4 @@ A No-Go at a gateway moves every later date by the rework time; the end date of
 [MIL-002]: ./milestones/mil-002-site-skeleton.md
 [MIL-003]: ./milestones/mil-003-dynamic-posts.md
 [MIL-004]: ./milestones/mil-004-docs-wiki-screenshots.md
+[1f11ab0]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/1f11ab05fc7d3af6f6694514dc6b103f9b7d557f

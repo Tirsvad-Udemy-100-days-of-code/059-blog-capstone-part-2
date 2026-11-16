@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-001, Mode: autonomous, not independent | [1f11ab0] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O6, success criterion SC10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-005; set the domain to education; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O6, success criterion SC10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-005; set the domain to education; reviewed in autonomous mode, not independent | [8dc3193] |
 
 ---
 
@@ -195,3 +195,4 @@ repository gives S01, S02 and S03 a reusable result.
 [1f11ab0]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/1f11ab05fc7d3af6f6694514dc6b103f9b7d557f
 [PP-001]: ./project-plan.md
 [MIL-005]: ./milestones/mil-005-framework-baseline.md
+[8dc3193]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/8dc3193b6ef18b8c03044408ae0fa5be595873a3

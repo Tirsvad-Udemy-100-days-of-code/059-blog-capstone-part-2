@@ -28,6 +28,9 @@ with a screenshot, in the project wiki.
 | `src/blog/` | The application: domain, application, infrastructure and presentation layers; `constants.py` holds all constants |
 | `tests/` | pytest tests (`unit/`, `integration/`, and `e2e/` for the Docker screenshot script) |
 | `docs/` | Project documents (business case, plan, reviews), the wiki and the screenshots |
+| `framework/` | The SQA and QC framework (a git submodule) that the project documents follow |
+| `.editorconfig` | The editor settings of the framework baseline |
+| `.env.example` | Placeholders for the git host tokens that the framework scripts read; the program itself reads no setting from `.env` |
 
 ### The seven lecture steps
 
@@ -96,7 +99,7 @@ the HTML is written to `docs/doxygen/`.
 
 ## 📄 License
 
-GNU Affero General Public License v3.0, see [LICENSE][license]. The Clean Blog
+GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later), see [LICENSE][license]. The Clean Blog
 template files are MIT licensed by Start Bootstrap.
 
 ## 🔗 Links
@@ -111,15 +114,12 @@ The documents a newcomer needs, in reading order.
 
 | Document | What it tells you |
 | --- | --- |
-| [AGENTS.md][agents] | The rules AI agents follow in this repository |
 | [Business Case][BC-001] | Why the project exists, its scope and success criteria |
 | [Stakeholder Analysis][SA-001] | Who is involved; the stakeholder IDs used for owners and reviewers |
 | [Project Plan][PP-001] | The gateways and their schedule |
 | [Milestones][milestones] | One document per gateway: Go/No-Go criteria and tasks |
 | [Artifact registry][registry] | Where each artifact type lives, the next version, the PO language and domain |
 | [Traceability matrix][TM-001] | How the artifacts link and when each was last reviewed |
-| [Framework README][framework-readme] | The framework this project uses |
-| [Framework changelog][framework-changelog] | What changed in each framework release |
 
 ---
 
@@ -136,12 +136,9 @@ The documents a newcomer needs, in reading order.
 [repository]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2
 [documentation]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/wiki
 [issues]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/issues
-[agents]: ./AGENTS.md
 [BC-001]: ./docs/business-case.md
 [SA-001]: ./docs/stakeholder-analysis.md
 [PP-001]: ./docs/project-plan.md
 [milestones]: ./docs/milestones/
 [registry]: ./docs/artifact-registry.md
 [TM-001]: ./docs/sqa/traceability-matrix.md
-[framework-readme]: ./framework/README.md
-[framework-changelog]: ./framework/CHANGELOG.md

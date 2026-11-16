@@ -4,14 +4,16 @@
 | Key | Value |
 | --- | --- |
 | ID | BC-001 |
-| CrossReference | [SA-001] |
+| CrossReference | [SA-001], [PP-001], [MIL-005] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Accepted | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-001, Mode: autonomous, not independent | [1f11ab0] |
+| 2026-11-09 | Deprecated | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-001, Mode: autonomous, not independent | [1f11ab0] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O6, success criterion SC10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-005; set the domain to education; reviewed in autonomous mode, not independent | [8dc3193] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Allowed one behaviour-neutral source change in MIL-005 (task 6): the bundled posts file is read with `pathlib` instead of `importlib.resources`, which clears the blocking finding of the shared OpenGrep check; reviewed in autonomous mode, not independent | [faf4c22] |
 
 ---
 
@@ -66,6 +68,7 @@ and delivery workflow on a small, bounded project.
 | O3 | Provide complete project hygiene: `pyproject.toml`, local `.venv` instructions, Python `.gitignore`, `constants.py`, Doxygen comments and a `Doxyfile`. |
 | O4 | Document the work: README from the framework template and a wiki in English, Danish and Bahasa Malaysia, each with a screenshot per lecture step and an explanation of what that step teaches. |
 | O5 | Publish the repository with a description and topics on the git host. |
+| O6 | Bring the finished project to the common baseline of the framework: the adopted framework release, a README that lists only the documents of the repository, project URL metadata, the editor settings of the baseline and an `.env.example` in the framework's form ([MIL-005]). |
 
 ## Scope
 
@@ -83,6 +86,7 @@ and delivery workflow on a small, bounded project.
   `constants.py`, local `.venv` instructions.
 - README and the three-language wiki with screenshots for Steps 1 to 7.
 - Repository description and topics on the git host.
+- The baseline milestone [MIL-005]: the framework release, the README without the private framework files in its appendix, project URL metadata, `.editorconfig`, `.env.example`, review records and a review of the wiki. It changes no behaviour of the program: its one source change (task 6) is the bundled posts file is read with `pathlib` instead of `importlib.resources`, so that the shared OpenGrep check passes.
 
 ### Out of Scope
 
@@ -92,6 +96,7 @@ and delivery workflow on a small, bounded project.
 - Editing the framework mounted at `framework/`.
 - Creating the user's own npoint account or bin (the public course document is
   used; the endpoint is configurable).
+- Any change to `tests/`, `docs/screenshots/` or the wiki pages, and any change to `src/` other than task 6 (the bundled posts file is read with `pathlib` instead of `importlib.resources`), in the baseline milestone [MIL-005]. That milestone starts no Flask server, takes no screenshot, starts no container, calls no live API and runs the tests only.
 
 ## Expected Benefits
 
@@ -126,6 +131,7 @@ readable code, clear documentation and no needless dependencies.
 | SC7 | Repository metadata | Description set and at least 5 topics | Git host API response |
 | SC8 | Doxygen documentation | `doxygen Doxyfile` finishes with 0 warnings | Doxygen log |
 | SC9 | Review gates | Every milestone has an `RC-*` with `Go` before its pull request | `docs/sqa/reviews/` |
+| SC10 | The baseline milestone is done (objective O6) | `framework/scripts/check-readme.sh`, `check-languages.sh` and `check-editorconfig.sh` exit with code 0, `python -m pytest` passes, 100 % of the continuous integration (CI) checks of the pull request of [MIL-005] pass | The script exit codes and the pull request status on the git host |
 
 ## Risks
 
@@ -137,11 +143,12 @@ readable code, clear documentation and no needless dependencies.
 | Danish or Bahasa Malaysia text contains errors | Reduced value for S02 | English is authoritative; translations follow it page by page and are flagged for native review |
 | Language criteria need a person who reads the language | A stand-in review stays `Go-with-conditions` | The Product Owner confirms those criteria in chat when accepting the plan |
 | A token leaks into the repository | Security defect | Tokens stay in the untracked `.env`; it is in `.gitignore` and never read by project code |
+| The documents of the baseline milestone [MIL-005] change documents that were accepted earlier, and an AI stand-in for S01 reviews them | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, `tests/` is not changed, `src/` only by task 6, the tests run before and after, and the end-of-run summary lists the reviews for challenge |
 
 ## Assumptions
 
 - S01 is Product Owner, developer and reviewer; S02 and S03 are not contacted.
-- The PO language is English and the PO domain is IT.
+- The PO language is English and the PO domain is education since [MIL-005] (it was IT until then; the documents that [MIL-005] does not change keep the domain `it`, see the Open Issues of [PP-001]).
 - The remote `git.tirsystem.com` accepts the token in `.env` for repository
   settings, pull requests and milestones.
 - Docker is available for headless screenshots.
@@ -154,6 +161,7 @@ readable code, clear documentation and no needless dependencies.
 - Folder structure `src/`, `tests/` and `docs/`.
 - One branch and one pull request per milestone; no merge without green checks.
 - The work ends by 2026-11-16.
+- The baseline milestone [MIL-005] starts 2026-11-16 and is finished within one week, by 2026-11-23; the end date of the work moves to 2026-11-23 for that milestone only. An AI stand-in for S01 reviews and accepts the changed documents.
 - `.env` is for the maintainer only: it is not imported, tested or committed.
 - Runtime dependencies are avoided unless needed (only Flask is needed).
 
@@ -186,3 +194,7 @@ repository gives S01, S02 and S03 a reusable result.
 
 [SA-001]: ./stakeholder-analysis.md
 [1f11ab0]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/1f11ab05fc7d3af6f6694514dc6b103f9b7d557f
+[PP-001]: ./project-plan.md
+[MIL-005]: ./milestones/mil-005-framework-baseline.md
+[8dc3193]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/8dc3193b6ef18b8c03044408ae0fa5be595873a3
+[faf4c22]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/faf4c222a7f7eeda241ec05143b8d87ba5d2dcd6

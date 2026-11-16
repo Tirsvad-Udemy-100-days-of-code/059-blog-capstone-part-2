@@ -7,10 +7,7 @@
 import json
 import logging
 from collections.abc import Callable
-
-# False positive: the project requires Python >=3.13, where importlib.resources exists.
-# nosemgrep: opengrep.rules.python.lang.compatibility.python37-compatibility-importlib2
-from importlib import resources
+from pathlib import Path
 from typing import Any
 from urllib.error import URLError
 from urllib.parse import urlsplit
@@ -20,6 +17,9 @@ from blog import constants
 from blog.domain.post import Post
 
 logger = logging.getLogger(__name__)
+
+BUNDLED_DATA_DIR = Path(__file__).resolve().parent / "data"
+"""@brief Folder of the posts file that ships with the package."""
 
 ALLOWED_URL_SCHEMES = frozenset({"http", "https"})
 """@brief URL schemes urlopen_fetch may open; urllib would also open file: and ftp:."""
@@ -77,7 +77,7 @@ def read_bundled_posts() -> list[Post]:
 
     @return The bundled posts.
     """
-    data = resources.files("blog.infrastructure").joinpath("data", constants.POSTS_FALLBACK_FILE)
+    data = BUNDLED_DATA_DIR / constants.POSTS_FALLBACK_FILE
     return parse_posts(data.read_text(encoding="utf-8"))
 
 

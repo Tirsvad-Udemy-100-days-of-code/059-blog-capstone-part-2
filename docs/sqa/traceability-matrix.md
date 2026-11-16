@@ -11,7 +11,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [1f11ab0] |
 | 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-005 and its review records RC-012 to RC-015; set the domain of BC-001 and PP-001 to education; replaced the reviewer placeholder of the first row; reviewed in autonomous mode, not independent | [8dc3193] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Recorded task 6 of MIL-005 (one source file changed); reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Recorded task 6 of MIL-005 (one source file changed); reviewed in autonomous mode, not independent | [faf4c22] |
 
 ---
 
@@ -66,3 +66,4 @@ The domain of BC-001, PP-001 and MIL-005 is `education` since MIL-005; the other
 [RC-014]: ./reviews/rc-014-milestone-005.md
 [RC-015]: ./reviews/rc-015-wiki-baseline.md
 [8dc3193]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/8dc3193b6ef18b8c03044408ae0fa5be595873a3
+[faf4c22]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/faf4c222a7f7eeda241ec05143b8d87ba5d2dcd6

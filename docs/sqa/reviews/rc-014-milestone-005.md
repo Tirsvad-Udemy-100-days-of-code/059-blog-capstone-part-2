@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [8dc3193] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Re-reviewed after the amendment of MIL-005 for task 6; verdict Go (autonomous, not independent) | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Re-reviewed after the amendment of MIL-005 for task 6; verdict Go (autonomous, not independent) | [faf4c22] |
 
 ---
 
@@ -65,3 +65,4 @@ Go — every Mandatory criterion of QC-MIL-001 and QC-LANG-001 passes; the miles
 [QC-MIL-001]: ../../../framework/qc/artifacts/qc-milestones-gateways.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md
 [8dc3193]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/8dc3193b6ef18b8c03044408ae0fa5be595873a3
+[faf4c22]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/faf4c222a7f7eeda241ec05143b8d87ba5d2dcd6

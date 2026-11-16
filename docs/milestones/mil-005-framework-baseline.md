@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; accepted with the Go verdict of the review record (autonomous, not independent) | [8dc3193] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 6 (a behaviour-neutral source change that clears the blocking finding of the OpenGrep check) and changed criterion 2 and the Deliverable to allow that one file; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 6 (a behaviour-neutral source change that clears the blocking finding of the OpenGrep check) and changed criterion 2 and the Deliverable to allow that one file; reviewed in autonomous mode, not independent | [faf4c22] |
 
 ---
 
@@ -79,3 +79,4 @@ A merged pull request that holds: the updated Business Case, Project Plan, Trace
 [PP-001]: ../project-plan.md
 [MIL-004]: ./mil-004-docs-wiki-screenshots.md
 [8dc3193]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/8dc3193b6ef18b8c03044408ae0fa5be595873a3
+[faf4c22]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/faf4c222a7f7eeda241ec05143b8d87ba5d2dcd6

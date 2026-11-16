@@ -13,7 +13,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-003, Mode: autonomous, not independent | [1f11ab0] |
 | 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway G5 (MIL-005) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain and the open pull request #31 in the Planning Assumptions and Open Issues; set the domain to education; reviewed in autonomous mode, not independent | [8dc3193] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Recorded task 6 of MIL-005 (one behaviour-neutral source change for the OpenGrep check) in the schedule row and the Open Issues; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Recorded task 6 of MIL-005 (one behaviour-neutral source change for the OpenGrep check) in the schedule row and the Open Issues; reviewed in autonomous mode, not independent | [faf4c22] |
 
 ---
 
@@ -134,3 +134,4 @@ A No-Go at a gateway moves every later date by the rework time; the end date of
 [MIL-005]: ./milestones/mil-005-framework-baseline.md
 [ms-580]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/milestone/580
 [8dc3193]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/8dc3193b6ef18b8c03044408ae0fa5be595873a3
+[faf4c22]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/059-blog-capstone-part-2/commit/faf4c222a7f7eeda241ec05143b8d87ba5d2dcd6

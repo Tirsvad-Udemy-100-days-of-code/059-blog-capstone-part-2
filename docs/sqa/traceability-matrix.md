@@ -10,7 +10,8 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [1f11ab0] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-005 and its review records RC-012 to RC-015; set the domain of BC-001 and PP-001 to education; replaced the reviewer placeholder of the first row; reviewed in autonomous mode, not independent | [8dc3193] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-005 and its review records RC-012 to RC-015; set the domain of BC-001 and PP-001 to education; replaced the reviewer placeholder of the first row; reviewed in autonomous mode, not independent | [8dc3193] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Recorded task 6 of MIL-005 (one source file changed); reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -33,7 +34,7 @@ updated whenever an artifact instance is created or reviewed.
 | MIL-004 | MIL | en | it | BC-001, MIL-003 | MIL-005 | RC-007, RC-011 |
 | MIL-005 | MIL | en | education | BC-001, PP-001, MIL-004 | - | RC-014, RC-015 |
 
-The domain of BC-001, PP-001 and MIL-005 is `education` since MIL-005; the other documents keep the domain `it` they were accepted with (see the Open Issues of PP-001). MIL-005 changes no source, test, screenshot or wiki file. The wiki is reviewed again in RC-015 (it has no row of its own in this matrix, as before).
+The domain of BC-001, PP-001 and MIL-005 is `education` since MIL-005; the other documents keep the domain `it` they were accepted with (see the Open Issues of PP-001). MIL-005 changes no test, screenshot or wiki file and one source file (task 6, a behaviour-neutral change). The wiki is reviewed again in RC-015 (it has no row of its own in this matrix, as before).
 
 ## Concern Coverage
 

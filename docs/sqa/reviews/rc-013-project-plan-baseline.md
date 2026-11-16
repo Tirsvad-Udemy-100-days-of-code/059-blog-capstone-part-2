@@ -9,7 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [8dc3193] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [8dc3193] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Re-reviewed after the amendment of PP-001 for task 6; verdict Go (autonomous, not independent) | pending |
 
 ---
 
@@ -35,7 +36,7 @@
 | 7 | Owners, reviewers and escalation roles use Stakeholder Analysis IDs and match the governance RACI | Pass | Owner S01 is a stakeholder ID of SA-001. The project has no governance document, so there is no RACI to contradict; no invented role names are used. |
 | 8 | Planning assumptions are listed with their source, and a changed baseline is recorded with its reason | Pass | Each planning assumption names its source (a Business Case section, the Stakeholder Analysis or a decision of S01); the move of the end date is recorded with its reason, the baseline of the framework. |
 | 9 | Plan risks are listed with impact and a mitigation, and trace to Business Case risks where they come from there | Pass | Plan Risks give impact and mitigation for each of the four risks; the CI risk of MIL-005 traces to success criterion SC10 of BC-001. |
-| 10 | Open issues are listed, and none contradicts a statement elsewhere in the plan | Pass | Open Issues list the earlier points and add the domain of the unchanged documents, the open pull request #31 that the baseline supersedes, the wiki review and the existing `nosemgrep` markers; no remaining statement contradicts another. |
+| 10 | Open issues are listed, and none contradicts a statement elsewhere in the plan | Pass | Open Issues list the earlier points and add the domain of the unchanged documents, the open pull request #31 that the baseline supersedes, the wiki review and the `nosemgrep` markers and their replacement by task 6 of the baseline; no remaining statement contradicts another. |
 | 11 | Each gateway's main deliverable is stated and matches the deliverable of its `MIL-*` document | Pass | The main deliverable of MIL-005 names the same items as its Deliverable section; the rows of MIL-001 to MIL-004 were not changed and match their milestone documents. |
 | 12 | Gateways that deliver user stories name them, and those that do not say why | Pass | The Stories column says `none` with its reason for every gateway, as the earlier rows do. |
 | 13 | The schedule view (table, Gantt) and the dependency view agree with each other | Pass | The Gantt bar of the baseline uses the dates of the schedule table. The bars of the earlier gateways were not changed here (this is an optional criterion). |

@@ -12,7 +12,8 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-001, Mode: autonomous, not independent | [1f11ab0] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O6, success criterion SC10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-005; set the domain to education; reviewed in autonomous mode, not independent | [8dc3193] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O6, success criterion SC10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-005; set the domain to education; reviewed in autonomous mode, not independent | [8dc3193] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Allowed one behaviour-neutral source change in MIL-005 (task 6): the bundled posts file is read with `pathlib` instead of `importlib.resources`, which clears the blocking finding of the shared OpenGrep check; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -85,7 +86,7 @@ and delivery workflow on a small, bounded project.
   `constants.py`, local `.venv` instructions.
 - README and the three-language wiki with screenshots for Steps 1 to 7.
 - Repository description and topics on the git host.
-- The baseline milestone [MIL-005]: the framework release, the README without the private framework files in its appendix, project URL metadata, `.editorconfig`, `.env.example`, review records and a review of the wiki. It changes no behaviour of the program.
+- The baseline milestone [MIL-005]: the framework release, the README without the private framework files in its appendix, project URL metadata, `.editorconfig`, `.env.example`, review records and a review of the wiki. It changes no behaviour of the program: its one source change (task 6) is the bundled posts file is read with `pathlib` instead of `importlib.resources`, so that the shared OpenGrep check passes.
 
 ### Out of Scope
 
@@ -95,7 +96,7 @@ and delivery workflow on a small, bounded project.
 - Editing the framework mounted at `framework/`.
 - Creating the user's own npoint account or bin (the public course document is
   used; the endpoint is configurable).
-- Any change to `src/`, `tests/`, `docs/screenshots/` or the wiki pages in the baseline milestone [MIL-005]. That milestone starts no Flask server, takes no screenshot, starts no container, calls no live API and runs the tests only.
+- Any change to `tests/`, `docs/screenshots/` or the wiki pages, and any change to `src/` other than task 6 (the bundled posts file is read with `pathlib` instead of `importlib.resources`), in the baseline milestone [MIL-005]. That milestone starts no Flask server, takes no screenshot, starts no container, calls no live API and runs the tests only.
 
 ## Expected Benefits
 
@@ -142,7 +143,7 @@ readable code, clear documentation and no needless dependencies.
 | Danish or Bahasa Malaysia text contains errors | Reduced value for S02 | English is authoritative; translations follow it page by page and are flagged for native review |
 | Language criteria need a person who reads the language | A stand-in review stays `Go-with-conditions` | The Product Owner confirms those criteria in chat when accepting the plan |
 | A token leaks into the repository | Security defect | Tokens stay in the untracked `.env`; it is in `.gitignore` and never read by project code |
-| The documents of the baseline milestone [MIL-005] change documents that were accepted earlier, and an AI stand-in for S01 reviews them | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, `src/` and `tests/` are not changed, the tests run before and after, and the end-of-run summary lists the reviews for challenge |
+| The documents of the baseline milestone [MIL-005] change documents that were accepted earlier, and an AI stand-in for S01 reviews them | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, `tests/` is not changed, `src/` only by task 6, the tests run before and after, and the end-of-run summary lists the reviews for challenge |
 
 ## Assumptions
 

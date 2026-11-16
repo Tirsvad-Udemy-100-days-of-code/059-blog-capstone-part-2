@@ -12,7 +12,8 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Claude (AI) for S01 | AI as stand-in for S01 | Initial version; reviewed in RC-003, Mode: autonomous, not independent | [1f11ab0] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway G5 (MIL-005) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain and the open pull request #31 in the Planning Assumptions and Open Issues; set the domain to education; reviewed in autonomous mode, not independent | [8dc3193] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway G5 (MIL-005) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain and the open pull request #31 in the Planning Assumptions and Open Issues; set the domain to education; reviewed in autonomous mode, not independent | [8dc3193] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Recorded task 6 of MIL-005 (one behaviour-neutral source change for the OpenGrep check) in the schedule row and the Open Issues; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -53,7 +54,7 @@ branch, one pull request, one review record and one Milestone on the git host.
 | G2 Site skeleton (Steps 1-5) | [MIL-002] | 2026-11-10 to 2026-11-12 | 2026-11-12 | S01 | none (lecture steps) | Bootstrap site with shared header and footer, About, Contact | [Milestone 385][ms-385] |
 | G3 Dynamic posts (Steps 6-7) | [MIL-003] | 2026-11-12 to 2026-11-14 | 2026-11-14 | S01 | none (lecture steps) | Posts from the API and post pages | [Milestone 386][ms-386] |
 | G4 Docs and wiki | [MIL-004] | 2026-11-14 to 2026-11-16 | 2026-11-16 | S01 | none (documentation) | README, trilingual wiki, screenshots | [Milestone 387][ms-387] |
-| G5 Framework baseline | [MIL-005] | 2026-11-16 to 2026-11-23 | 2026-11-23 | S01 | none (technical tasks) | Branch `mil-005-framework-baseline` merged: the adopted framework release, the README, project URL metadata, `.editorconfig`, `.env.example` and review records | [Milestone 580][ms-580] |
+| G5 Framework baseline | [MIL-005] | 2026-11-16 to 2026-11-23 | 2026-11-23 | S01 | none (technical tasks) | Branch `mil-005-framework-baseline` merged: the adopted framework release, the README, project URL metadata, `.editorconfig`, `.env.example`, review records and one behaviour-neutral source change (task 6) | [Milestone 580][ms-580] |
 
 ```plantuml
 @startgantt
@@ -115,7 +116,7 @@ A No-Go at a gateway moves every later date by the rework time; the end date of
 - Domain: since [MIL-005] the plan, the Business Case and the baseline milestone have the domain `education`. The other documents (Stakeholder Analysis, milestones MIL-001 to MIL-004 and the review records RC-001 to RC-011) keep the domain `it` they were accepted with; they are not changed by the baseline, and a change of their domain would need a new review of each.
 - The git host also has the open pull request #31 (framework submodule URL in lowercase); the baseline delivers the same change in the pull request of MIL-005, and S01 closes #31 after the merge.
 - The earlier review record RC-011 checked the wiki; MIL-005 checks it again against the current checklist (including the published wiki, criterion 14) and changes no page.
-- The source file `api_post_repository.py` carries two `nosemgrep` markers from MIL-003; the baseline leaves them as they are and changes no source file.
+- The source file `api_post_repository.py` carried two `nosemgrep` markers from MIL-003 whose rule names no longer match the rule names of the shared OpenGrep ruleset, so the check on the pull request of MIL-005 reported the `importlib.resources` import as a blocking finding. Task 6 of MIL-005 removes the import and its marker and reads the bundled posts file with `pathlib` (same behaviour, tests unchanged). The second marker (the `urllib` call, reported as a warning only) is left as it is; no suppression is added.
 
 ---
 
